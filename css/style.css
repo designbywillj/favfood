@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* Main */
+main {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Article */
+article {
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: onload 0.75s cubic-bezier(0, 0, 0.15, 1) 0.25s forwards;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+/* Articles */
+article h1,
+article h2 {
+    text-align: center;
+}
+
+/* Emojis */
+.emoji-wrapper {
+    margin-bottom: 4rem;
+}
+
+.emoji {
+    height: 12rem;
+    font-size: 10rem;
+    line-height: 12rem;
+    text-align: center;
+    color: #BBBDC9;
+    user-select: none;
+}
+
+/* Buttons */
+.btn-wrapper {
+    margin: 0 -0.75rem -1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    margin: 0 0.75rem 1.5rem;
+    padding: 0 1.5rem;
+    background-color: rgb(36, 38, 51);
+    border-radius: 1.5rem;
+    font-weight: 500;
+    color: #FFF;
+    line-height: 3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgba(36, 38, 51, 0.8);
+}
+
+/* Keyframes */
+@keyframes onload {
+    0% {
+        padding-top: 12rem;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    100% {
+        padding-top: 0;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
